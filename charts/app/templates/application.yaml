@@ -10,5 +10,5 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/danielzepp/arogcd-vault-plugin-demo'
-    path: charts/app
+    path: charts/helm
     targetRevision: HEAD
