@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app
+  name: app2
   namespace: argo-devops
 spec:
   destination:
@@ -10,5 +10,5 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/danielzepp/arogcd-vault-plugin-demo'
-    path: charts/app2
+    path: charts/helm
     targetRevision: HEAD
