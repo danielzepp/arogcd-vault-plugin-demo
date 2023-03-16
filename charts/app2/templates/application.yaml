@@ -10,8 +10,6 @@ spec:
   project: default
   source:
     helm:
-      values: |
-        namespace_alias: dev
       valueFiles:
         - /charts/helm/values.yaml
         - /charts/helm/values-2.yaml
