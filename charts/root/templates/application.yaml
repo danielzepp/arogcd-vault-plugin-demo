@@ -12,3 +12,13 @@ spec:
     repoURL: 'https://github.com/danielzepp/arogcd-vault-plugin-demo'
     path: charts/app
     targetRevision: HEAD
+  source:
+    helm:
+      values: |
+        namespace_alias: dev
+      valueFiles:
+        - /helm/values.yaml
+        - /helm/values-2.yaml
+    path: charts/qtl-application
+    repoURL: git@github.com:quotabook/quotalab-helm.git
+    targetRevision: HEAD
