@@ -1,0 +1,8 @@
+apiVersion: v2
+description: A Helm chart for Argo applications
+name: example
+version: 0.0.1
+home: https://github.com/danielzepp/arogcd-vault-plugin-demo
+maintainers:
+  - name: danielzepp
+    url: https://github.com/danielzepp
