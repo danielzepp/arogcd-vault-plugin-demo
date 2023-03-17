@@ -1,11 +1,7 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  labels:
-    app.quotaops.com/name: admin-api
-    app.quotaops.com/product: quotalab
-    app.quotaops.com/stack: dev
-  name: example-secret3
+  name: app2
   annotations:
     avp.kubernetes.io/remove-missing: "false"
 type: Opaque

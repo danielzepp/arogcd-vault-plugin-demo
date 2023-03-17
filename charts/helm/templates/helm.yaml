@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: helm
+  annotations:
+    avp.kubernetes.io/remove-missing: "false"
+type: Opaque
+stringData:
+  GOOGLE_CLIENTSECRET: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#GOOGLE_CLIENTSECRET>"
+  GOOGLE_CREDENTIALS: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#GOOGLE_CREDENTIALS>"
+  JWT_TOKEN_CLIENTSECRET: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#JWT_TOKEN_CLIENTSECRET>"
+  SPRING_DATASOURCE_PASSWORD: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#SPRING_DATASOURCE_PASSWORD>"
