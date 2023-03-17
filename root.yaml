@@ -1,13 +1,14 @@
-kind: Secret
-apiVersion: v1
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
   name: root
   namespace: argo-devops
-  annotations:
-    avp.kubernetes.io/remove-missing: "false"
-type: Opaque
-stringData:
-  GOOGLE_CLIENTSECRET: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#GOOGLE_CLIENTSECRET>"
-  GOOGLE_CREDENTIALS: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#GOOGLE_CREDENTIALS>"
-  JWT_TOKEN_CLIENTSECRET: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#JWT_TOKEN_CLIENTSECRET>"
-  SPRING_DATASOURCE_PASSWORD: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#SPRING_DATASOURCE_PASSWORD>"
+spec:
+  destination:
+    namespace: default
+    server: https://54CD9D1A65D415D56906FC91E77BF980.gr7.ap-northeast-2.eks.amazonaws.com
+  project: default
+  source:
+    repoURL: 'https://github.com/danielzepp/arogcd-vault-plugin-demo'
+    path: charts/app
+    targetRevision: HEAD
