@@ -4,6 +4,7 @@ metadata:
   name: helm
   annotations:
     avp.kubernetes.io/remove-missing: "false"
+    argocd.argoproj.io/sync-wave: "3"
 type: Opaque
 stringData:
   JWT_TOKEN_CLIENTSECRET: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#JWT_TOKEN_CLIENTSECRET>"

@@ -4,6 +4,7 @@ metadata:
   name: app
   annotations:
     avp.kubernetes.io/remove-missing: "false"
+    argocd.argoproj.io/sync-wave: "1"
 type: Opaque
 stringData:
   GOOGLE_CLIENTSECRET: "<path:kv-k8s/data/quotalab/backend-platform/admin-api/dev/dev#GOOGLE_CLIENTSECRET>"
