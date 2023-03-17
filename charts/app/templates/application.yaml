@@ -9,6 +9,14 @@ spec:
     server: https://54CD9D1A65D415D56906FC91E77BF980.gr7.ap-northeast-2.eks.amazonaws.com
   project: default
   source:
+    helm:
+      values: |
+        namespace_alias: dev
+      valueFiles:
+        - /charts/helm/values.yaml
+        - /charts/helm/values-2.yaml
+        - /charts/helm/values-3.yaml
+      ignoreMissingValueFiles: true
     repoURL: 'https://github.com/danielzepp/arogcd-vault-plugin-demo'
     path: charts/app2
     targetRevision: HEAD
