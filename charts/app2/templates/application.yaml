@@ -12,6 +12,11 @@ spec:
     helm:
       values: |
         namespace_alias: dev
+      valueFiles:
+        - /charts/helm/values.yaml
+        - /charts/helm/values-2.yaml
+        - /charts/helm/values-3.yaml
+      ignoreMissingValueFiles: true
     repoURL: 'https://github.com/danielzepp/arogcd-vault-plugin-demo'
     path: charts/helm
     targetRevision: HEAD
